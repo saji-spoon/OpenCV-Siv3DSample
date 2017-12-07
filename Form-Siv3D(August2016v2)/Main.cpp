@@ -85,11 +85,13 @@ void Main()
 
         s3d::Window::SetStyle(s3d::WindowStyle::Sizeable);
 
-        s3d::Image image(L"../private/formRead/sample.jpg");
+        s3d::Window::Resize(800, 600);
+
+        s3d::Image image(L"form.jpg");
 
         if (!image)
         {
-                LOG(L"Image Read Failed");
+                LOG(L"Image Load Failed");
                 return;
         }
 
